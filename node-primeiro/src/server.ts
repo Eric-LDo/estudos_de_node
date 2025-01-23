@@ -9,16 +9,10 @@ server.use(express.static(path.join(__dirname, "../public")))
 server.get("/ping", (req, res)=>{
     res.json({mensagem:"pong"})
 })
-server.get("/", (req, res) => {
-    let nome:string = "Diego";
-    let idade:number = 25;
+server.get("/produtos/:id", (req, res) => {
+    const id = req.params.id;
+    res.json({id});
 
-    res.json(
-        {
-        nome,
-        idade
-       }
-)
 })
 
 server.listen(3333,()=>{

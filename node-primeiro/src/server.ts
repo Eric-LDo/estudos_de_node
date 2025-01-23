@@ -12,8 +12,8 @@ server.get("/ping", (req, res)=>{
 server.get("/produtos/:id", (req, res) => {
     const id = req.params.id;
     res.json({id});
-
 })
+
 
 server.listen(3333,()=>{
     console.log("Server is running on port 3333");
